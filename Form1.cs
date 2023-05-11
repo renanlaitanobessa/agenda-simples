@@ -19,9 +19,17 @@ namespace AgendaSimplesT4
 
         private void btnaddcontato_Click(object sender, EventArgs e)
         {
-            Contato objetoContato = new Contato(); 
-            lstContatos.Items.Add(objcontato) 
+            Contato objetoContato = new Contato(txtnome.Text, txtsobrenome.Text, txttelefone.Text, txtemail.Text);
+            lstContatos.Items.Add(objetoContato.ToString());
+        
 
+
+
+         
+          }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
