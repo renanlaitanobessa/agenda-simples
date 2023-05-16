@@ -100,6 +100,7 @@
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(100, 20);
             this.txttelefone.TabIndex = 6;
+            this.txttelefone.TextChanged += new System.EventHandler(this.txttelefone_TextChanged);
             // 
             // lstContatos
             // 
@@ -125,6 +126,7 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(100, 20);
             this.txtemail.TabIndex = 9;
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
             // Form1
             // 
