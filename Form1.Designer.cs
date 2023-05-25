@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,9 @@
             this.lstContatos = new System.Windows.Forms.ListBox();
             this.email = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnordenar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,11 +78,10 @@
             // 
             this.btnaddcontato.Location = new System.Drawing.Point(40, 238);
             this.btnaddcontato.Name = "btnaddcontato";
-            this.btnaddcontato.Size = new System.Drawing.Size(142, 57);
+            this.btnaddcontato.Size = new System.Drawing.Size(188, 62);
             this.btnaddcontato.TabIndex = 3;
             this.btnaddcontato.Text = "inserir contato";
             this.btnaddcontato.UseVisualStyleBackColor = true;
-            this.btnaddcontato.Click += new System.EventHandler(this.btnaddcontato_Click);
             // 
             // txtnome
             // 
@@ -100,12 +103,11 @@
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(100, 20);
             this.txttelefone.TabIndex = 6;
-            this.txttelefone.TextChanged += new System.EventHandler(this.txttelefone_TextChanged);
             // 
             // lstContatos
             // 
             this.lstContatos.FormattingEnabled = true;
-            this.lstContatos.Location = new System.Drawing.Point(335, 36);
+            this.lstContatos.Location = new System.Drawing.Point(326, 12);
             this.lstContatos.Name = "lstContatos";
             this.lstContatos.Size = new System.Drawing.Size(239, 238);
             this.lstContatos.TabIndex = 7;
@@ -126,13 +128,33 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(100, 20);
             this.txtemail.TabIndex = 9;
-            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnordenar
+            // 
+            this.btnordenar.Location = new System.Drawing.Point(356, 261);
+            this.btnordenar.Name = "btnordenar";
+            this.btnordenar.Size = new System.Drawing.Size(184, 57);
+            this.btnordenar.TabIndex = 12;
+            this.btnordenar.Text = "ordenar";
+            this.btnordenar.UseVisualStyleBackColor = true;
+            this.btnordenar.Click += new System.EventHandler(this.btnordenar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 330);
+            this.Controls.Add(this.btnordenar);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.email);
             this.Controls.Add(this.lstContatos);
@@ -163,6 +185,9 @@
         private System.Windows.Forms.ListBox lstContatos;
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button btnordenar;
     }
 }
 
