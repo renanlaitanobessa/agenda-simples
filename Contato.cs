@@ -11,7 +11,6 @@ namespace AgendaSimplesT4
         private string primeiroNome;
         private string sobrenome;
         private string telefone;
-        private string email;
 
 
 
@@ -28,11 +27,6 @@ namespace AgendaSimplesT4
             get { return sobrenome; }
             set { sobrenome = value; }
         }
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
 
 
 
@@ -41,12 +35,10 @@ namespace AgendaSimplesT4
             get { return telefone; }
             set
             {
-                
                 if (value.Length == 11)
-                    telefone = value;
-
+                    Telefone = value;
                 else
-                    telefone = "00000000000";
+                    Telefone = "00000000000";
             }
         }
 
@@ -54,32 +46,23 @@ namespace AgendaSimplesT4
         {
             PrimeiroNome = "Jose";
             Sobrenome = "Da Silva";
-            Telefone = "11912345678";
-            Email = "renanbessa@hotmail.com"; 
+            Telefone = "11912345678"; 
         }
 
-        public Contato(string primeiroNome, string sobrenome, string telefone , string email)
+        public Contato(string primeiroNome, string sobrenome, string telefone)
         {
             PrimeiroNome = primeiroNome;
             Sobrenome = sobrenome;
             Telefone = telefone;
-            Email = email; 
 
         }
 
         public override string ToString()
         {
             string saida = String.Empty;
-            saida += String.Format("{0}, {1} , {2}" , PrimeiroNome, Sobrenome, Email );
+            saida += String.Format("{0}, {1}" , PrimeiroNome, Sobrenome );
             saida += " ";
-            saida += String.Format("{0}-{1}-{2}", 
-                Telefone.Substring(0, 2), 
-                Telefone.Substring(2, 5), 
-                Telefone.Substring(7, 4));
-            
-            saida += " ";
-            saida += String.Format("{0}", Email);
-
+            saida += String.Format("{0}-{1}-{2}", Telefone.Substring(0, 1), Telefone.Substring(2, 4), Telefone.Substring(7, 3);   
 
             return saida; 
 
